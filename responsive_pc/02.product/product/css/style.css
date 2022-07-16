@@ -1,0 +1,244 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
+
+/* reset */
+body { font-family: 'Noto Sans KR', sans-serif;}
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+h1,h2,h3,h5,h6 {font-size: inherit;}
+a:hover {text-decoration: none; color: inherit;}
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif;}
+.wrap {width: 100%; position: relative;}
+
+/* header */
+header{width: 100%; height: 100px; color: #fff; box-sizing: border-box; padding: auto; z-index: 200; background: rgba(2,2,2,0.19); font-size: 20px; transition: all 0.1s; position: fixed;}
+.innerheader{width: 1400px;  height: 100%; margin: 0 auto; overflow: hidden;}
+.innerheader h1.logo{float: left; margin-top: 25px;}
+.innerheader h1.logo a{width: 100%; height: 100%; display: block;} 
+.innerheader h1.logo a img{width: 100%; height: 100%;}
+.innerheader nav{width: 84%; height: 100%; margin: 0 auto; overflow: hidden; line-height: 100px;}
+.innerheader nav ul.menu{float: right; width: 100%; height: 100%;overflow: hidden; margin-right: -452px;}
+.innerheader nav ul.menu li{float: left; width: 7%; text-align: center; margin-left: 105px; }
+.innerheader nav ul.menu li:first-child{margin-left: 0;}
+.innerheader nav ul.menu li a{display: block; width: 100%; height: 100%;}
+.innerheader nav ul.menu li .bottom{display: none;}
+header .sub_menu {display: none;}
+
+/*hover*/
+
+header:hover{background: #171312; transition: all 0.1s;}header .sub_menu ul.sub_list li a:hover span{
+    content: ''; 
+    display: inline-block; 
+    width: 80px; 
+    text-align: left;
+    border-bottom: 1px solid #fff; 
+    transition: all 0.1s; 
+    animation-name: bottom; 
+    animation-duration: 0.2s;
+}
+
+/*animation*/
+
+@keyframes bottom{
+    0%{width: 0%;}
+    50%{width: 30px;}
+    100%{width: 80px;}
+}
+
+
+
+header .sub_menu{width: 100%; height: 300px; margin: 0 auto; background: #171312; font-size: 18px;}
+header .sub_menu nav{width: 1400px; height: 100%; overflow: hidden;  margin: 0 auto; position: relative;}
+header .sub_menu ul.sub_list{display: flex; justify-content: flex-end; width: 520px; height: 100%; position: absolute; right: 235px; top: 0;}
+header .sub_menu ul.sub_list li{ text-align: center;  padding-top:50px; box-sizing: border-box; width: 150px; margin-right: 45px;}
+
+header .sub_menu ul.sub_list li a{line-height: 0.6; display: block; width: 100%; height: 30px; }
+header .sub_menu ul.sub_list li:last-child{margin-right: 0;}
+
+
+
+/* visualimg */
+.visualimg {width: 100%; height: 600px; position: relative; overflow: hidden;}
+.visualimg .inner {width: 1400px; color: #fff; padding-left: 270px; padding-top: 180px; box-sizing: border-box;}
+.visualimg .inner-01 { background: url(../img/product/product_visual_01.jpg) no-repeat center/cover;}
+.visualimg .inner-02 { background: url(../img/product/product_visual_02.jpg) no-repeat center/cover;}
+.visualimg .inner-03 { background: url(../img/product/product_visual_03.jpg) no-repeat center/cover;}
+.wrap .slick-dots li.slick-active button:before { color: white; }
+.wrap .slick-dots li button:before { color: white; }
+.visualimg .inner .tit {font-size: 80px; margin-bottom: 47px;}
+.visualimg .inner .txt {font-size: 18px; line-height: 35px; padding-bottom: 93px; box-sizing: border-box;}
+.wrap .slick-prev {display: none !important;}
+.wrap .slick-next {display: none !important;}
+
+
+
+.wrap .slick-dots {position: absolute; bottom: 15px; display: block; width: 100%; padding: 0; margin: 0; list-style: none; text-align: center; }
+.wrap .slick-dots li {position: relative; display: inline-block; width: 20px; height: 20px; margin: 0 5px; padding: 0; cursor: pointer; }
+.wrap .slick-dots li button { font-size: 0; line-height: 0; display: block; width: 20px; height: 20px;  padding: 5px;  cursor: pointer;  color: transparent;  border: 0;  outline: none;    background: transparent; }
+.wrap .slick-dots li button:before { font-size: 35px; line-height: 20px; position: absolute;  top: 0;  left: 0;  width: 10px;  height: 10px;  content: '';  text-align: center;    opacity: 0.8;    background: #fff;   
+-webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale; }
+.wrap .slick-dots li.slick-active button:before { opacity: 0.75;  background: #3C4194; }
+
+
+
+/* topbut */
+.contents {background: #fff; overflow: hidden;}
+.contents .topbut {width: 1400px; height: 80px; margin: 180px auto 120px; padding: 0 248px 0; box-sizing: border-box;}
+.contents .topbut ul {width: 100%; overflow: hidden; margin: 0 auto;}
+.contents .topbut ul li {width: 300px;float: left; }
+.contents .topbut ul li a {display:block;width: 100%; height: 100%;text-align: center;  padding: 22px 0; box-sizing: border-box; 
+border :1px solid #707070; transition: all 0.3s; font-size: 23px;}
+.contents .topbut ul li:nth-child(1) a {border-left: none; border-right: none;}
+.contents .topbut ul li:nth-child(3) a {border-right: none; border-left: none;}
+.contents .topbut ul li a:hover {background: #3C4194; color: #fff; transition: all 0.5s;}
+
+
+
+
+
+/* circularsaw */
+.circularsaw {width: 100%;}
+.circularsaw .inner {width: 1400px;margin: 90px auto 243px;} 
+.circularsaw .inner .inner_content {width: 100%;}
+.circularsaw .inner .inner_content h3 {font-size: 35px; text-align: center; margin: 90px auto 120px;}
+.circularsaw .inner .inner_content .list {width: 100%;overflow: hidden;}
+.circularsaw .inner .inner_content .list > li {float: left; width:calc(33.3333% - 102.6666px ); margin-right: 154px; }
+.circularsaw .inner .inner_content .list > li:nth-child(3) {margin-right: 0;}
+.circularsaw .inner .inner_content .list > li a {display: block; width: 100%;height: 100%;position: relative; text-align:center; }
+.circularsaw .inner .inner_content .list > li a img {width: 100%;}
+.circularsaw .inner .inner_content .list > li p.tit {font-size: 25px; position: relative; margin-top: 55px; display: block; text-align: center; margin-bottom: 15px;}
+.circularsaw .inner .inner_content .list > li:nth-child(2) p.tit::before {left: 35%;}
+.circularsaw .inner .inner_content .list > li:nth-child(3) p.tit::before {left: 29%;}
+.circularsaw .inner .inner_content .list > li p.txt {font-size: 18px; text-align: center; margin-bottom: 15px;}
+.circularsaw .inner .inner_content .list > li a p.more {display: inline-block;text-align: center; font-size: 15px; padding: 2px 28px; position: relative;z-index: 2; letter-spacing: 2px; margin: 0 auto;} 
+.circularsaw .inner .inner_content .list > li a p.more span {position: absolute; top: 25%;}
+.circularsaw .inner .inner_content .list > li a p.more::after {content: ''; background: rgb(117, 119, 168);width: 25%;height: 100%; position: absolute;left: 10px; top: 0; border-radius: 50%; z-index: -1; transition: all 0.5s;}
+.circularsaw .inner .inner_content .list > li a:hover p.more::after {width: 100%; border-radius: 50px; background:rgb(95, 97, 166);}
+.circularsaw .inner .inner_content .list > li a:hover p.more {color: #fff;}
+
+
+/* circularsaw_hover */
+.circularsaw .inner .inner_content .list li a { position: relative;}
+.circularsaw .inner .inner_content .list li a .circularsaw_hover { position: absolute; top:0; background-color: rgba(16,17,33,0.9); width: 100%; height: 100%; 
+    color: white; padding: 30px;    box-sizing: border-box; opacity: 0;  transition:all .35s;}
+.circularsaw .inner .inner_content .list li a:hover .circularsaw_hover { transition:all .35s; opacity: 1;}
+span.circularsaw-inner-txt {    display: block; margin-bottom:20px; }
+span.circularsaw-inner-txt span {    display: inline-block; }
+span.inner-list-left {    width: 25%; }
+.circularsaw_hover .tit {  font-size: 25px;  font-weight: bold;  padding-bottom: 35px;  border-bottom: 2px solid #fff;  margin-bottom: 35px; }
+.circularsaw-inner span.inner-list-left {float: left; }
+
+
+/* circularsawmachine */
+.circularsawmachine {width: 100%;}
+.circularsawmachine .inner {width: 1400px; margin: 243px auto 90px;border-top: 1.5px solid #5A5757;}
+.circularsawmachine .inner .inner_content {width: 100%;}
+.circularsawmachine .inner .inner_content h3 {font-size: 35px; text-align: center; margin: 90px auto 120px;}
+.circularsawmachine .inner .inner_content .list {width: 100%; overflow: hidden;}
+.circularsawmachine .inner .inner_content .list li {float: left; width:calc(33.3333% - 102.6666px ); margin-right: 154px; margin-bottom: 100px;}
+.circularsawmachine .inner .inner_content .list li:nth-child(3) {margin-right: 0;}
+.circularsawmachine .inner .inner_content .list li a {display: block; width: 100%; height: 100%; text-align: center;}
+.circularsawmachine .inner .inner_content .list li:nth-child(4), .circularsawmachine .inner .inner_content .list li:nth-child(5) {margin-bottom: 0;}
+.circularsawmachine .inner .inner_content .list li a img {width: 100%;}
+.circularsawmachine .inner .inner_content .list li p.tit {font-size: 25px; margin-bottom: 15px; position: relative; margin-top: 55px;}
+.circularsawmachine .inner .inner_content .list li p.txt {font-size: 18px; margin-bottom: 18px;}
+.circularsawmachine .inner .inner_content .list > li a p.more {display: inline-block;text-align: center; font-size: 15px; padding: 2px 28px;position: relative;z-index: 2; letter-spacing: 2px; margin: 0 auto;} 
+.circularsawmachine .inner .inner_content .list > li a p.more span {position: absolute; top:25%;}
+.circularsawmachine .inner .inner_content .list > li a p.more::after {content: ''; background: rgb(117, 119, 168);width: 25%;height: 100%; position: absolute;left: 8px; top: 0; border-radius: 50%; z-index: -1; transition: all 0.5s;}
+.circularsawmachine .inner .inner_content .list > li a:hover p.more::after {width: 100%; border-radius: 50px; background:rgb(95, 97, 166);}
+.circularsawmachine .inner .inner_content .list > li a:hover p.more {color: #fff;}
+
+
+
+
+/* circularsawmachine_hover */
+.circularsawmachine .inner .inner_content .list > li a {position: relative;}
+.circularsawmachine .inner .inner_content .list > li a .circularsawmachine_hover {position: absolute; background: rgba(16,17,33,0.9); top: 0; width: 100%; height: 100%; padding: 30px; box-sizing: border-box; opacity: 0; transition: all 0.35s;}
+.circularsawmachine .inner .inner_content .list > li a .circularsawmachine_hover .tit {border-bottom: 1px solid #fff; padding-bottom: 35px; margin-bottom: 30px; color: #fff; font-size: 25px;} 
+.circularsawmachine .inner .inner_content .list > li a .circularsawmachine_hover .txt {color: #fff; overflow: hidden; }
+.circularsawmachine .inner .inner_content .list > li a .circularsawmachine_hover .txt span.left { margin-bottom: 20px; width:40%;  float: left;}
+.circularsawmachine .inner .inner_content .list > li a .circularsawmachine_hover .txt span.right { margin-bottom: 20px; }
+
+.circularsawmachine-inner-txt { display: block; }
+.circularsawmachine-inner-txt span { display: inline-block; font-size: 14px; }
+
+.circularsawmachine .inner .inner_content .list > li a:hover .circularsawmachine_hover {opacity: 1; transition: all 0.35s;}
+
+
+
+
+/* bandsawmachine */
+.bandsawmachine {width: 100%;}
+.bandsawmachine .inner {width: 1400px; margin: 243px auto 0; border-top: 1.5px solid #5A5757;}
+.bandsawmachine .inner .inner_content {width: 100%;}
+.bandsawmachine .inner .inner_content  h3 {font-size: 35px; text-align: center; margin: 90px auto 120px;}
+.bandsawmachine .inner .inner_content  .list {width: 100%; overflow: hidden;}
+.bandsawmachine .inner .inner_content  .list li {float: left; width:calc(33.3333% - 102.6666px ); margin-right: 154px; margin-bottom: 100px;}
+.bandsawmachine .inner .inner_content  .list li:nth-child(7) {margin-bottom: 180px;}
+.bandsawmachine .inner .inner_content  .list li:nth-child(3n) {margin-right: 0;}
+.bandsawmachine .inner .inner_content  .list li a {display: block; width: 100%; height: 100%; text-align: center;}
+.bandsawmachine .inner .inner_content  .list li:nth-child(7) a.more {margin-bottom: 180px;} 
+.bandsawmachine .inner .inner_content  .list li a img {width: 100%;}
+.bandsawmachine .inner .inner_content  .list li p.tit {font-size: 25px; margin-bottom: 15px; position: relative; margin-top: 55px;}
+.bandsawmachine .inner .inner_content  .list li p.txt {font-size: 18px; margin-bottom: 18px;}
+.bandsawmachine .inner .inner_content .list > li a p.more {display: inline-block;text-align: center; font-size: 15px; padding: 2px 28px;position: relative;z-index: 2; letter-spacing: 2px; margin: 0 auto;} 
+.bandsawmachine .inner .inner_content .list > li a p.more span {position: absolute; top: 25%;}
+.bandsawmachine .inner .inner_content .list > li a p.more::after {content: ''; background: rgb(117, 119, 168);width: 25%;height: 100%; position: absolute;left: 8px; top: 0; border-radius: 50%; z-index: -1; transition: all 0.5s;}
+.bandsawmachine .inner .inner_content .list > li a:hover p.more::after {width: 100%; border-radius: 50px; background:rgb(95, 97, 166);}
+.bandsawmachine .inner .inner_content .list > li a:hover p.more {color: #fff;}
+
+
+/* bandsawmachine_hover */
+.bandsawmachine .inner .inner_content .list li a {position: relative;}
+.bandsawmachine .inner .inner_content .list li  a .bandsawmachine_hover {background: rgba(16,17,33,0.9); position: absolute; top: 0; width: 100%; height: 100%; padding: 30px; box-sizing: border-box; color: #fff;
+opacity: 0; transition: all 0.35s;}
+.bandsawmachine .inner .inner_content .list li  a .bandsawmachine_hover h4 {border-bottom: 1px solid #fff; padding-bottom: 35px; margin-bottom: 30px; font-size: 25px;}
+.bandsawmachine .inner .inner_content .list li  a .bandsawmachine_hover .txt {overflow: hidden;}
+.bandsawmachine .inner .inner_content .list li  a .bandsawmachine_hover .txt .circularsawmachine-inner-txt {margin-bottom: 20px;}
+.bandsawmachine .inner .inner_content .list li  a .bandsawmachine_hover .txt .circularsawmachine-inner-txt span.left {width: 45%;}
+
+.bandsawmachine .inner .inner_content .list li  a:hover .bandsawmachine_hover {opacity: 1; transition: all 0.35s;}
+
+
+
+/* footer */
+footer{width: 100%; height: 370px; margin: 0 auto;padding-top: 46px;color: #fff;background: #171312;box-sizing: border-box;}
+.inner_footer{width: 1160px; height: 100%; margin: 0 auto;}
+.inner_footer .top{width: 100%; margin: 0 auto; margin-bottom: 35px;}
+.inner_footer .menu{margin: 0 auto;overflow: hidden; }
+.inner_footer .menu li{float: left; width: 20%;  height: 166px;border-right: 1px solid #707070; }
+.inner_footer .menu li:first-child, .inner_footer .menu li:nth-child(2){border-right: 0px;}
+.inner_footer .menu li a{position: relative;display: block;width: 100%;height: 100%;}
+
+/*hover*/
+.inner_footer .menu li.txt p:hover a {text-decoration: underline;}
+.inner_footer .menu li.logo {height: 100%;margin-top: 30px; }
+.inner_footer .menu li.txt{float: right; text-align: center; }
+.inner_footer .menu li.txt p{margin-bottom: 10px; font-size: 16px; font-weight: 300;}
+.inner_footer .menu li.txt p.tit{margin-bottom: 20px;font-size: 20px; font-weight: normal;}
+
+footer .bottom{width: 100%; margin: 0 auto;}
+footer .bottom ul.contact{overflow: hidden;}
+footer .bottom ul.contact > li:nth-child(1){float: left; width: 50%;height: 100%;}
+footer ul.contact > li:nth-child(2){float: left; width: 40%;}
+footer ul.contact li ul.adress{width: 445px; font-size: 15px;font-weight: 200; line-height: 1.2;overflow: hidden;}
+footer ul.contact li ul.adress li span{font-weight: bold;}
+footer ul.contact li ul.adress li.float{float: left; margin-right: 3%;width: 32%;}
+footer ul.contact li ul.adress li:nth-child(3){text-align: right;width: 26%;}
+footer ul.contact li ul.adress li:nth-child(4){margin-right: 0; text-align: right;width: 30%;}
+footer ul.contact > li:last-child{margin-left: 40px; margin-top: -5px;}
+
+footer ul.contact li ul.sns{font-size: 50px; overflow: hidden; text-align: right; width: 400px; margin-left: 64px; }
+footer ul.contact li ul.sns li{float: left; width: 25%;}
+
+/* rightBtn */
+.wrap > a {width: 100%; height: 100%;}
+.wrap a p.rightBtn {background: #3C4194; border-radius: 50%; padding: 20px 15px; position: fixed; right: 50px; bottom: 50px; font-size: 20px; text-transform: uppercase;
+font-weight: bold; color: #fff;}
+.wrap a p.rightBtn.on {position: absolute; bottom: 420px;}
+.wrap a p.rightBtn span {position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); font-size: 16px; font-weight: bold;}

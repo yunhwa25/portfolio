@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
+
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+h1,h2,h3,h5,h6 {font-size: inherit;}
+a:hover {text-decoration: none; color: inherit;}
+
+footer{width: 100%; height: 370px; background: #171312; margin: 0 auto; padding-top: 46px; box-sizing: border-box; color: #fff;}
+.inner_footer{width: 1160px; height: 100%; margin: 0 auto;}
+.inner_footer .top{width: 100%; margin: 0 auto; margin-bottom: 35px;}
+.inner_footer .top .menu{overflow: hidden; margin: 0 auto;}
+.inner_footer .top .menu li{float: left; width: 20%;  border-right: 1px solid #707070; height: 166px; }
+.inner_footer .top .menu li:first-child, .inner_footer .top .menu li:nth-child(2){border-right: 0px;}
+.inner_footer .top .menu li a{display: block; height: 100%; width: 100%; }
+
+/*hover*/
+.inner_footer .top .menu li.txt p:hover a{display: block; width: 100%; height: 100%; text-decoration: underline;}
+
+
+
+.inner_footer .top .menu li.logo {margin-top: 30px; height: 100%;}
+.inner_footer .top .menu li.logo img{display: block; width: 100%;height: 100%;}
+.inner_footer .top .menu li.txt{float: right; text-align: center; }
+.inner_footer .top .menu li.txt p{margin-bottom: 10px; font-size: 18px; font-weight: 300;}
+.inner_footer .top .menu li.txt p.tit{font-size: 20px; font-weight: normal; margin-bottom: 20px;}
+
+footer .bottom{width: 100%; margin: 0 auto; }
+footer .bottom ul.contact{overflow: hidden;}
+footer .bottom ul.contact > li:nth-child(1){float: left; width: 50%;}
+footer .bottom ul.contact > li:nth-child(2){float: left; width: 40%;}
+footer .bottom ul.contact li ul.adress{width: 100%; overflow: hidden; font-size: 15px; line-height: 1.2;}
+footer .bottom ul.contact li ul.adress li span{font-weight: bold;}
+footer .bottom ul.contact li ul.adress li.float{float: left; width: 23%; margin-right: 11px;}
+footer .bottom ul.contact li ul.adress li:nth-child(2){width: 30%;}
+
+footer .bottom ul.contact li ul.sns{font-size: 50px; overflow: hidden;}
+footer .bottom ul.contact li ul.sns li{float: left; width: 20%;}
+

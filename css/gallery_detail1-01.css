@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; color: #030101;}
+.wrap {width: 100%; overflow: hidden;}
+
+
+
+/* header */
+header {position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.8); z-index: 100;}
+.innerHeader {width: 87.5%; height: 60px; margin: 0 auto; overflow: hidden;}
+.innerHeader .logo {height: 100%; width: auto; float: left;}
+.innerHeader .logo img {height: 100%;}
+.innerHeader .close {float: right; font-size: 30px; line-height: 2;}
+/* header-hover */
+.innerHeader .close:hover, .innerHeader .close:focus {color: #FFD955; transition: all 0.3s;}
+
+
+
+/* contents */
+/* .visual */
+.visual {width: 100%; height: 100vh; overflow: hidden;}
+.visual .inner {width: 87.5%; height: 64vh; background: url(../img/gallery_detail/detail1-01_visual.jpg) no-repeat center/cover;
+margin-left: 12.5%; margin-top: 26vh; background-attachment: fixed; position: relative;}
+.visual .inner .bg {width: 100%; height: 64vh; background: rgba(3,1,1,0.45); position: absolute; top: 0; left: 0;}
+.visual .inner .txtBox {width: 86%; margin: 0 auto; position: relative; transform: translateY(10%);}
+.visual .inner .txtBox .tit {font-size: 75px; color: #FFD955; line-height: 100px; position: relative; padding-bottom: 40px;
+margin: 0 0 50px 30px; transition: all 0.3s;}
+.visual .inner .txtBox .tit::after {content: ''; width: 20px; height: 1px; background: #fff; position: absolute; left: 0; bottom: 0;}
+.visual .inner .txtBox .txt {margin-left: 30px; font-size: 15px; font-weight: bold; color: #fff; margin-bottom: 15%;}
+.visual .inner .txtBox .des {overflow: hidden; margin-left: 30px;}
+.visual .inner .txtBox .des li {float: left; margin-right: 120px;}
+.visual .inner .txtBox .des li .sub_tit {font-size: 15px; font-weight: bold; color: #fff;}
+.visual .inner .txtBox .des li .sub_txt {font-size: 15px; color: #fff;}
+.visual .inner button {transform: rotate(-90deg); border: none; background: none; font-family: 'GmarketSansMedium'; font-size: 20px;
+transition: all 0.3s;}
+.visual .inner button::after {content: ''; width: 65px; height: 2px; background: #030101; position: absolute;
+top: 47%; transform: translateY(-50%); left: 115%;}
+.visual .inner button.prev {position: absolute; left: -5%; top: 15%;}
+.visual .inner button.next {transform: rotate(90deg); position: absolute; left: -5%; bottom: 15%;}
+/* .visual-hover */
+.visual .inner .txtBox .tit:hover, .visual .inner .txtBox .tit:focus {color: #D03F2E; transition: all 0.3s;}
+.visual .inner button:hover.prev, .visual .inner button:focus.prev {transform: rotate(-90deg) translateX(-30%); transition: all 0.3s;}
+.visual .inner button:hover.next, .visual .inner button:focus.next {transform: rotate(90deg) translateX(-30%); transition: all 0.3s;}
+
+
+/* .overview */
+.overview {width: 100%;}
+/* .overview-top */
+.overview .top {width: 100%; background: #fff;}
+.overview .top .inner {width: 64%; margin: 0 auto; position: relative;}
+.overview .top .inner .tit {margin: 0 0 100px 30px; font-size: 25px; font-weight: bold; color: #23255A; padding-top: 60px;}
+.overview .top .inner .txtBox {overflow: hidden; padding-bottom: 490px;}
+.overview .top .inner .txtBox li {float: left;}
+.overview .top .inner .txtBox .sub_tit {font-size: 50px; font-weight: bold; line-height: 67px; width: 50%; padding-left: 30px; box-sizing: border-box;}
+.overview .top .inner .txtBox .txt {width: 50%; padding-left: 15px; box-sizing: border-box;}
+.overview .top .inner .txtBox .txt p {font-size: 15px; line-height: 25px; margin-bottom: 30px;}
+.overview .top .inner .txtBox .txt p:last-child {margin-bottom: 0;}
+.overview .top .inner .img {width: 100%; position: absolute; left: 0; bottom: -32%;}
+.overview .top .inner .img img {width: 100%;}
+/* .overview-bottom */
+.overview .bottom {width: 100%; background: #E9E9E9; overflow: hidden;}
+.overview .bottom .inner {width: 64%; margin: 350px auto 0;}
+.overview .bottom .inner > ul > li {padding-left: 30px;}
+.overview .bottom .inner > ul > li .tit {margin-bottom: 80px; font-size: 25px; font-weight: bold; color: #23255A;}
+/* .overview-bottom .goal */
+.overview .bottom .inner .goal {float: left; width: 50%; box-sizing: border-box;}
+.overview .bottom .inner .goal .highlight {font-size: 25px; font-weight: bold; line-height: 40px; position: relative;}
+.overview .bottom .inner .goal .highlight::before {content: '\f10d'; font-family: 'FontAwesome'; color: #FFD955;
+font-size: 50px; position: absolute; top: -10px; left: -55px;}
+.overview .bottom .inner .goal .highlight::after {content: '\f10e'; font-family: 'FontAwesome'; color: #FFD955;
+font-size: 50px; position: absolute; top: 210px; right: 105px;}
+.overview .bottom .inner .goal .highlight li {position: relative;}
+.overview .bottom .inner .goal .highlight li::before {content: ''; width: 153px; height: 15px; background: #FFD955;
+position: absolute; top: 15px; left: -5px;}
+.overview .bottom .inner .goal .highlight li:nth-child(1):before {width: 127px; left: 119px;}
+.overview .bottom .inner .goal .highlight li:nth-child(3):before, .overview .bottom .inner .goal .highlight li:nth-child(4):before {top: 55px;}
+.overview .bottom .inner .goal .highlight li p {position: relative;}
+/* .overview-bottom .process */
+.overview .bottom .inner .process {float: right; width: 50%; box-sizing: border-box;}
+.overview .bottom .inner .process .txtBox li {margin-bottom: 45px;}
+.overview .bottom .inner .process .txtBox li:last-child {margin-bottom: 150px;}
+.overview .bottom .inner .process .txtBox li .sub_tit {font-size: 25px; font-weight: bold; margin-bottom: 15px;}
+.overview .bottom .inner .process .txtBox li .sub_txt {font-size: 15px; line-height: 25px;}
+
+
+/* .archive */
+.archive {width: 100%; background: #FFD955; overflow: hidden;}
+.archive .inner {width: 87.5%; margin: 130px auto; background: #fff;}
+/* .archive-txtBox */
+.archive .inner .txtBox {width: 72%; margin: 0 auto; overflow: hidden;}
+.archive .inner .txtBox .tit {font-size: 50px; font-weight: bold; margin: 170px 0 15px;}
+.archive .inner .txtBox .txt {font-size: 20px; margin-bottom: 80px;}
+/* .archive-imgBox */
+.archive .inner .imgBox {width: 100%; height: 1100px; position: relative;}
+.archive .inner .imgBox .img {position: absolute; width: 100%; height: 100%;}
+.archive .inner .imgBox .img.area {left: 0; top: 0;}
+.archive .inner .imgBox .img.area img {width: 100%;}
+.archive .inner .imgBox .img.polarloid li {width: 100%;}
+.archive .inner .imgBox .img.polarloid li p {width: 100%;}
+.archive .inner .imgBox .img.polarloid li p img {width: 12%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(1) {position: absolute; left: 15%; top: 32%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(2) {position: absolute; left: 20%; top: 13%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(3) {position: absolute; left: 33%; top: 20%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(4) {position: absolute; left: 45%; top: 11%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(5) {position: absolute; left: 27%; top: 51%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(6) {position: absolute; left: 41%; top: 49%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(5) p img,
+.archive .inner .imgBox .img.polarloid li:nth-child(6) p img {width: 14%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(7) {position: absolute; left: 54%; top: 37%;}
+.archive .inner .imgBox .img.polarloid li:nth-child(8) {position: absolute; left: 68%; top: 20%;}
+.archive .inner .imgBox .img.text img {width: 100%;}
+.archive .inner .imgBox .img.person {position: absolute; right: 0; bottom: 90px;}
+.archive .inner .imgBox .img.person img {position: absolute; right: 0; bottom: 0; width: 34%;}
+
+
+/* .preview */
+.preview {width: 100%;}
+/* .preview-top */
+.preview .top {width: 100%; background: #fff;}
+.preview .top .inner {width: 64%; margin: 0 auto; position: relative;}
+.preview .top .inner .tit {margin: 0 0 15px 30px; font-size: 50px; font-weight: bold; padding-top: 170px;}
+.preview .top .inner .txt {margin: 0 0 580px 30px; font-size: 15px;}
+.preview .top .inner .imgBox {overflow: hidden;}
+.preview .top .inner .imgBox .asis .i_txt {position: absolute; left: -140px; top: 449px; transform: rotate(-20deg);}
+.preview .top .inner .imgBox .asis .i_img {position: absolute; left: 0; top: 550px; width: 524px; height: 354px; border-radius: 30px;
+overflow: hidden; box-shadow: 7px 10px 8px rgba(0,0,0,0.15);}
+.preview .top .inner .imgBox .asis .i_img img {width: 100%;}
+.preview .top .inner .imgBox .tobe .i_txt {transform: rotate(20deg); position: absolute; right: -140px; top: 449px;}
+.preview .top .inner .imgBox .tobe .i_video {position: absolute; right: 0; top: 550px; width: 524px; height: 354px; border-radius: 30px;
+overflow: hidden; box-shadow: 7px 10px 8px rgba(0,0,0,0.15);}
+.preview .top .inner .imgBox .tobe .i_video video {height: 108%;; position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%);}
+.preview .top .inner .imgBox .arrow .i_arrow {position: absolute; left: 47%; top: 75%; transform: translateX(-50%);}
+/* .preview-bottom */
+.preview .bottom {width: 100%; background: #BCBEBF;}
+.preview .bottom .inner {width: 64%; margin: 0 auto; overflow: hidden;}
+.preview .bottom .inner .txtBox {width: 100%; margin-top: 100px;}
+.preview .bottom .inner .txtBox li:nth-child(1) {float: left;}
+.preview .bottom .inner .txtBox li:nth-child(2) {float: right; margin-right: 30px;}
+.preview .bottom .inner .txtBox .sub_tit {font-size: 25px; font-weight: bold; margin-bottom: 15px;}
+.preview .bottom .inner .txtBox .sub_txt {font-size: 15px; line-height: 25px; margin-bottom: 120px;}
+
+
+/* .style */
+.style {width: 100%; background: #fff;}
+.style .inner {width: 64%; margin: 0 auto;}
+/* .style-color */
+.style .inner .color {width: 100%; margin-top: 170px; padding-left: 30px; box-sizing: border-box;}
+.style .inner .color .tit {font-size: 50px; font-weight: bold; margin-bottom: 80px;}
+.style .inner .color .sub_tit {font-size: 25px; font-weight: bold; color: #23255A; margin-bottom: 130px;}
+.style .inner .color .palette {width: 100%; height: 275px; padding: 0 210px 0 210px; box-sizing: border-box;}
+.style .inner .color .palette li {float: left; width: 32%; margin-right: 2%; position: relative; margin-bottom: 210px;}
+.style .inner .color .palette li:nth-child(3) {margin-right: 0;}
+.style .inner .color .palette li p {position: relative; font-size: 25px; font-weight: bold; text-align: center; color: #fff;}
+.style .inner .color .palette li::before {content: ''; width: 225px; height: 225px; position: absolute; left: 50%; top: 50%;
+transform: translate(-50%, -50%); border-radius: 50%; background: #23255A;}
+.style .inner .color .palette li:nth-child(2):before {background: #3C4194;}
+.style .inner .color .palette li:nth-child(3):before {background: #171312;}
+/* .style-font */
+.style .inner .font {width: 100%; margin-bottom: 300px; padding-left: 30px; box-sizing: border-box; overflow: hidden;}
+.style .inner .font .sub_tit {font-size: 25px; font-weight: bold; color: #23255A; margin-bottom: 50px;}
+.style .inner .font .font_ex {width: 100%;}
+.style .inner .font .font_ex li {float: left; width: 50%;}
+.style .inner .font .font_ex li:first-child {font-size: 75px;}
+.style .inner .font .font_ex li:first-child span {color: #fff; text-shadow: -1px -1px 0 #030101, 1px -1px 0 #030101, -1px 1px 0 #030101, 1px 1px 0 #030101}
+.style .inner .font .font_ex li:last-child {padding-left: 30px; box-sizing: border-box;}
+.style .inner .font .font_ex li p.light {display: inline-block; line-height: 100px; font-size: 35px; font-weight: 300; margin-right: 5%}
+.style .inner .font .font_ex li p.regular {display: inline-block; line-height: 100px; font-size: 35px; font-weight: 400; margin-right: 5%;}
+.style .inner .font .font_ex li p.bold {display: inline-block; line-height: 100px; font-size: 35px; font-weight: 700;}
+.style .inner .font .font_ex li p.kor {font-size: 20px; letter-spacing: 4px; margin: 15px 0;}
+.style .inner .font .font_ex li p.eng {font-size: 20px; letter-spacing: 2.5px; margin-bottom: 15px;}
+.style .inner .font .font_ex li p.num {font-size: 20px; letter-spacing: 6px;}
+
+
+/* .develop */
+.develop {width: 100%; position: relative;}
+.develop .top {width: 100%; background: #E9E9E9; overflow: hidden; height: 1750px;}
+.develop .top .inner {width: 64%; margin: 170px auto 0; padding-left: 30px; box-sizing: border-box;}
+.develop .top .inner .tit {font-size: 50px; font-weight: bold; margin-bottom: 80px;}
+.develop .top .inner .sub_tit {font-size: 25px; font-weight: bold; color: #23255A; margin-bottom: 15px;}
+.develop .top .inner .txt {font-size: 15px; line-height: 25px;}
+.develop .middle {width: 100%; background: #BCBEBF; height: 2400px;}
+.develop .bottom {width: 100%; background: #E9E9E9; height: 2850px;}
+.develop .bottom .inner {width: 75%; height: 100%; margin: 0 auto; position: relative;}
+.develop .bottom .inner a {position: absolute; right: 0; bottom: 11%; transform: rotate(-90deg);
+font-family: 'GmarketSansMedium'; font-size: 20px; transition: all 0.3s;}
+.develop .bottom .inner a::after {content: ''; width: 65px; height: 2px; background: #030101; position: absolute;
+top: 30%; left: 115%;}
+.develop .videoBox {width: 64%; height: 542px; position: absolute; top: 560px; left: 50%; transform: translateX(-50%);}
+.develop .videoBox .pc {width: 78%; height: 542px; box-shadow: 7px 10px 8px rgba(0,0,0,0.15); border-radius: 30px; overflow: hidden;
+position: absolute; left: -30px;}
+.develop .videoBox .pc video {height: 116%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.develop .videoBox .mobile {width: 22%; height: 542px; box-shadow: 7px 10px 8px rgba(0,0,0,0.15); border-radius: 30px; overflow: hidden;
+position: absolute; right: -30px; background: #030101;}
+.develop .videoBox .mobile video {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.develop .captureImg {width: 64%; position: absolute; left: 50%; top: 1300px; transform: translateX(-50%); overflow: hidden;}
+.develop .captureImg .left {float: left; width: 42.5%; margin: 0 5%;}
+.develop .captureImg .left li {margin-bottom: 11%; box-shadow: 7px 10px 8px rgba(0,0,0,0.15);}
+.develop .captureImg .left li img {width: 100%;}
+.develop .captureImg .right {float: right; width: 42.5%; margin-right: 5%;}
+.develop .captureImg .right li {margin-bottom: 11%; box-shadow: 7px 10px 8px rgba(0,0,0,0.15);}
+.develop .captureImg .right li:first-child {margin-top: 250px;}
+.develop .captureImg .right li img {width: 100%;}
+/* .develop-hover */
+.develop .bottom .inner a:hover, .develop .bottom .inner a:focus {transform: rotate(-90deg) translateX(30%); transition: all 0.3s;}

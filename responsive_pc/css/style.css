@@ -1,0 +1,562 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700;900&display=swap');
+
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif;}
+.wrap {width: 100%; overflow: hidden; position: relative;}
+.wrap section.contents {width: 100%;}
+
+
+/* header */
+header{width: 100%; height: 100px; color: #fff; box-sizing: border-box; margin: 0 auto; padding:auto 0; z-index: 200;
+    background: rgba(2,2,2,0.19); font-size: 20px; position: fixed; left: 0; top: 0;}
+.innerheader{width: 1400px; height: 100%; margin: 0 auto; overflow: hidden;}
+.innerheader h1.logo{float: left; margin-top: 25px;}
+.innerheader h1.logo a{width: 100%; height: 100%; display: block;}
+.innerheader h1.logo a img{width: 100%; height: 100%;}
+.innerheader nav{width: 80%; height: 100%; margin: 0 auto; overflow: hidden; line-height: 100px; float: right;}
+.innerheader nav ul.menu{float: right; width: 100%; height: 100%; overflow: hidden;}
+.innerheader nav ul.menu li{float: right; width: 7%; text-align: center; margin-right: 10%; text-transform: uppercase;}
+.innerheader nav ul.menu li:first-child{margin-right: 0;}
+.innerheader nav ul.menu li a{display: block; width: 100%; height: 100%;}
+.innerheader nav ul.menu li .bottom{display: none;}
+.innerheader a.menubar {display: none;}
+
+header .gnb .close {display: none;}
+header .gnb .gnb_menu {position: absolute; left: -200%;}
+header .sub_menu {display: none;}
+
+/*hover*/
+
+header:hover{background: #171312; transition: all 0.1s;}
+header .sub_menu ul.sub_list li a:hover span{
+    content: ''; 
+    display: inline-block; 
+    width: 80px; 
+    text-align: left;
+    border-bottom: 1px solid #fff; 
+    transition: all 0.1s; 
+    animation-name: bottom; 
+    animation-duration: 0.2s;
+}
+
+/*animation*/
+
+@keyframes bottom{
+    0%{width: 0%;}
+    50%{width: 30px;}
+}
+
+
+header .sub_menu{width: 100%; height: 300px; margin: 0 auto; background: #171312; font-size: 18px;}
+header .sub_menu nav{width: 1060px; height: 100%; overflow: hidden;  margin: 0 auto; position: relative;}
+header .sub_menu ul.sub_list{width: 100%; height: 100%; position: relative;}
+header .sub_menu ul.sub_list li{float: right; text-align: center; padding-top: 50px;
+box-sizing: border-box; width: 11%; margin-right: 7%;}
+
+header .sub_menu ul.sub_list li a{line-height: 0.6; display: block; width: 100%; height: 30px; }
+header .sub_menu ul.sub_list li:first-child{margin-right: 0;}
+
+/*visual*/
+.visual{width: 100%; position: relative;}
+.visual_inner{width: 100%; position: relative;}
+.visual_inner ul{width: 100%; overflow: hidden;}
+.visual_inner ul li{position: relative; overflow: hidden; float: left;}
+.visual_inner ul li p.img{width: 100%;}
+.visual_inner ul li p.img img {width: 100%;}
+.visual_inner ul li .txt_box{width: 100%; margin: 0 auto; position: absolute; top: 25%; left: 19%; color: #fff;}
+.visual_inner ul li .txt_box .title{font-size: 80px; font-weight: bold; line-height: 116px; margin: 4% 0 3%;}
+.visual_inner ul li .txt_box .txt{font-size: 18px; line-height: 35px;}
+.visual_inner ul li a.btn {display: block; width: 180px; height: 55px; font-size: 20px; border: 1px solid #fff;
+border-radius: 50px; padding-left: 40px; line-height: 55px; transition: all 0.3s; position: relative; margin-top: 2.8%;}
+.visual_inner ul li a.btn::before {content: '\f178'; font-family: fontAwesome; position: absolute; right: 40px; font-size: 30px;}
+.visual .arrow i {position: absolute; font-size: 28px; color: #fff; padding: 10px; top: 50%; transform: translateY(-50%); }
+.visual .arrow i:nth-child(1) {left: -50px;}
+.visual .arrow i:nth-child(2) {right: -50px;}
+
+/* hover */
+.visual_inner ul li a.btn:hover {background: #fff; color: #23255A; font-weight: bold; transition: all 0.5s;}
+
+/* visual slick 위치지정 */
+.slick-arrow {display: inline-block; position: relative;top: 220px;z-index: 500;color: #fff;font-size: 20px; opacity: 0.4;}
+.slick-prev,.slick-next {font-size: 0; position: absolute;bottom: 20px;color: #fff;;border: 0;background: none;z-index: 1;
+    top: 20px; cursor: pointer;}
+.slick-prev {left: 12%;}
+.slick-prev:after {content: '\f104'; font-size: 90px; font-family: 'fontAwesome';}
+.slick-next {right: 12%; text-align: right;}
+.slick-next::after {content: '\f105'; font-size: 90px; font-family: 'fontAwesome';}
+.slick-prev:hover:after,.slick-next:hover:after {color: #7e7e7e;}
+
+/* visual slick - 점 위치 지정 */
+ul.slick-dots {position: absolute; left: 21.25%; top: 23%; text-indent: -999999px; z-index: 20;}
+ul.slick-dots li {width: 13px; height: 13px; background: #fff; margin-right: 35px; transition: all 0.5s;  display: inline-block;}
+ul.slick-dots li button {cursor : pointer; width: 100%; height: 100%; background: #fff; border: none; text-indent: -99999px;}
+/*.visual .slide .slick-dots li button {width: 100%; height: 100%; background: #fff; border: none; text-indent: -99999px;}*/
+/* 점 hover */
+ul.slick-dots li:hover {cursor : pointer; background: #3C4194; transition: all 0.5s; }
+ul.slick-dots li.slick-active{cursor : pointer; background: #3C4194; transition: all 0.5s;}
+ul.slick-dots li.slick-active button {cursor : pointer; background: #3C4194; transition: all 0.5s;}
+
+/* splitting animation */
+.visual .slick-active .splitting .word {
+    display: inline-block;
+    animation: slide-up 1s cubic-bezier(.10, 0, .10, 1) both;
+    animation-delay: calc(60ms * var(--word-index));
+
+}
+
+@keyframes slide-up {
+    0% {opacity: 0; transform: translateY(30px);}
+    80% {opacity: 0; transform: translateY(30px);}
+}
+
+
+/*company advantage01*/
+.company_advantage01{width: 100%; margin: 0 auto;}
+.company_advantage01 .inner{width: 1400px; margin: 170px auto; text-align: center;}
+.company_advantage01 .inner p.tit{font-size: 40px; color: #23255A; font-weight: 700; margin-bottom: 40px;}
+.company_advantage01 .inner p.txt{font-size: 55px; color: #000; font-weight: bold; line-height: 1.2;}
+.company_advantage01 .inner p.txt span{font-size: 30px; color: #000; font-weight: 400;}
+
+
+/*company advantage02*/
+.company_advantage02{width: 100%; height: 794px; background:#23255A; margin-bottom: 170px;}
+.company_advantage02 .inner{width: 1400px; height: 100%; margin: 0 auto;}
+.company_advantage02 .inner ul.list{width: 100%; height: 100%; overflow: hidden;}
+.company_advantage02 .inner ul li{float: left; width: 32.3333%; height: 794px; position: relative; border-left: 3px solid #272963;}
+.company_advantage02 .inner ul li:last-child{border-right: 3px solid #272963;}
+.company_advantage02 .inner ul li p.img{width: 100%; height: 100%}
+.company_advantage02 .inner ul li p.img img{width: 100%; height: 100%; opacity: 0; transition: all 0.3s;}
+.company_advantage02 .inner ul li .txt_box{width: 100%; height: 100%;position: absolute; text-align: center; color: #fff; top: 0; left: 0; transform: translateY(18%);}
+.company_advantage02 .inner ul li .txt_box .num{font-size: 33px; font-weight: 700; margin-bottom: 95px;}
+.company_advantage02 .inner ul li .txt_box .icon{font-size: 68px; margin-bottom: 90px; font-weight: normal;}
+.company_advantage02 .inner ul li .txt_box .tit{font-size: 35px; font-weight: bold; margin-bottom: 25px;}
+.company_advantage02 .inner ul li .txt_box .txt{font-size: 22px; line-height: 40px;}
+.company_advantage02 .inner ul li .txt_box .txt span {display: block;}
+/*hover*/
+.company_advantage02 .inner ul li:hover p.img img{opacity: 1; transition: all 0.5s;}
+
+/*product*/
+.product {width: 100%; margin-bottom: 170px;}
+.product .inner {width: 1400px; margin: 0 auto;}
+.product .inner .mobile_tit {font-size: 18px; color: #23255A; font-weight: 700; margin-bottom: 30px; text-align: center; display: none;}
+.product .inner ul {width: 100%; overflow: hidden;}
+.product .inner ul li {float: left; width: 22%; margin-right: 4%;}
+.product .inner ul li:last-child {margin-right: 0;}
+.product .inner ul li .img_box {width: 100%; height: 498px; border: 1px solid #999; margin-bottom: 34px; position: relative; box-sizing: border-box;}
+.product .inner ul li .img_box .num {font-size: 26px; color: #36398f; font-weight: bold; margin: 18px 0 100px 20px; position: relative;}
+.product .inner ul li .img_box p.img {width: 80%; margin-left: 10%; box-sizing: border-box; overflow: hidden;}
+.product .inner ul li .img_box p.img img {width: 100%;}
+.product .inner ul li:nth-child(2) .img_box p.img img, .product .inner ul li:nth-child(3) .img_box p.img img {margin-top: 20%;}
+.product .inner ul li .txt_box {text-align: left;}
+.product .inner ul li .txt_box p.tit {font-size: 25px; font-weight: bold; margin-bottom: 45px; position: relative;}
+.product .inner ul li .txt_box p.tit:after {content: ''; position: absolute; left:0; top: 55px; background: #3C4194; height: 1px; width: 35%;}
+.product .inner ul li .txt_box p.txt {font-weight: 300;}
+
+/* product hover */
+.product .inner ul li .img_box:before {content: ''; width: 100%; height: 100%; position:absolute; left:0; top:0; transition: all 0.3s; background: #101121; opacity: 0;}
+.product .inner ul li .img_box:hover:before {opacity: 90%; transition: all 0.5s;}
+
+.product .inner ul li .img_box:after {content: ''; position: absolute; left: 0%; top:50%; transform: (-50%, -50%); color: #fff; opacity: 0;
+    font-size: 20px; font-weight: bold; padding: 0 30px;}
+.product .inner ul li:nth-child(1) .img_box:after {content: '지속적으로 연마가 가능하여 경비절감에 효율적입니다.';}
+.product .inner ul li:nth-child(2) .img_box:after, .product .inner ul li:nth-child(3) .img_box:after {content: '빠르고 정확하며 깨끗한 절단면을 자랑합니다.';}
+.product .inner ul li:nth-child(4) .img_box:after {content: '다양한 사이즈의 피삭체를 절단하기에 적합하며 소음과 분진에도 강합니다.';}
+.product .inner ul li .img_box:hover:after {opacity: 1; transition: all 0.5s;}
+.product .inner ul li .img_box:hover .num {color: #fff;}
+
+
+/*company advantage03*/
+.company_advantage03 {width: 100%; margin-bottom: 170px; background: #23255A;}
+.company_advantage03 .inner{width: 1400px; margin: 0 auto; text-align: center;}
+.company_advantage03 .inner .txt_box {padding: 135px;}
+.company_advantage03 .inner p.tit{font-size: 40px; color: #fff; font-weight: bold; margin-bottom: 41px;}
+.company_advantage03 .inner p.txt{font-size: 55px; color: #fff; font-weight: bold;}
+
+/* news */
+.news {width: 100%; margin-bottom: 170px;}
+.news .inner {width: 1400px; margin: 0 auto;}
+.news .inner ul {width: 100%; overflow: hidden;}
+.news .inner ul li {float: left; width: 32%; margin-right: 2%;}
+.news .inner ul li:last-child {margin-right: 0;}
+.news .inner ul li .img {width: 100%; margin-bottom: 34px; border: 1px solid #bbb;}
+.news .inner ul li .img img {width: 100%;}
+.news .inner ul li .bottom {text-align: left;}
+.news .inner ul li .bottom p.newsTit {font-size: 25px; font-weight: bold; margin-bottom: 40px;}
+.news .inner ul li .bottom a {display: block; font-size: 20px; color: #3C4194;}
+.news .inner ul li .bottom a span {margin-left: 10px;}
+
+/* company_advantage04 */
+.company_advantage04 {width: 100%; height: 100%; position: relative;}
+.company_advantage04 p.img {width: 100%; height: 100%; overflow: hidden; margin: 0 auto;}
+.company_advantage04 p.img img {width: 100%; height: auto;}
+.company_advantage04 .inner {width: 1400px; text-align: center;color: #fff; position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.company_advantage04 .inner p.title {font-size: 38px; font-weight: 600; margin-bottom: 25px;}
+.company_advantage04 .inner p.txt {font-size: 20px; margin-bottom: 65px;}
+.company_advantage04 .inner a {border: 1px solid #fff; border-radius: 50px; padding: 10px 40px; transition: all 0.3s;}
+
+/* company_advantage04 hover */
+.company_advantage04 .inner a:hover {background: #fff; color: #23255A; font-weight: bold; transition: all 0.5s;}
+
+/* footer */
+footer{width: 100%; margin: 0 auto; padding: 46px 0 56px 0;color: #fff;background: #171312;box-sizing: border-box;}
+.inner_footer{width: 1160px; height: 100%; margin: 0 auto;}
+.inner_footer .top{width: 100%; margin: 0 auto; margin-bottom: 35px;}
+.inner_footer .menu{margin: 0 auto;overflow: hidden; }
+.inner_footer .menu li{float: left; width: 20%;  height: 166px;border-right: 1px solid #707070; }
+.inner_footer .menu li:first-child, .inner_footer .menu li:nth-child(2){border-right: 0px;}
+.inner_footer .menu li a{display: block;width: 100%;height: 100%;}
+
+/*hover*/
+.inner_footer .menu li.txt p:hover a {text-decoration: underline;}
+.inner_footer .menu li.logo {height: 100%; margin-top: 30px; }
+.inner_footer .menu li.txt{float: right; text-align: center; }
+.inner_footer .menu li.txt p{margin-bottom: 10px; font-size: 16px; font-weight: 300;}
+.inner_footer .menu li.txt p.tit{margin-bottom: 20px;font-size: 20px; font-weight: normal;}
+
+footer .bottom{width: 100%; margin: 0 auto;}
+footer .bottom ul.contact{overflow: hidden;}
+footer .bottom ul.contact > li:nth-child(1){float: left; width: 50%;height: 100%;}
+footer ul.contact > li:nth-child(2){float: left; width: 40%;}
+footer ul.contact li ul.adress{width: 445px; font-size: 15px;font-weight: 200; line-height: 1.2;overflow: hidden;}
+footer ul.contact li ul.adress li span{font-weight: bold;}
+footer ul.contact li ul.adress li.float{float: left; margin-right: 3%;width: 32%;}
+footer ul.contact li ul.adress li:nth-child(3){text-align: right;width: 26%;}
+footer ul.contact li ul.adress li:nth-child(4){margin-right: 0; text-align: right;width: 30%;}
+footer ul.contact > li:last-child{margin-left: 40px; margin-top: -5px;}
+
+footer ul.contact li ul.sns{font-size: 50px; overflow: hidden; text-align: right; width: 400px; margin-left: 64px; }
+footer ul.contact li ul.sns li{float: left; width: 25%;}
+
+/* rightBtn */
+.wrap > a {width: 100%; height: 100%; display: block;}
+.wrap a p.rightBtn {background: #3C4194; width: 70px; height: 70px; border-radius: 100%; position: fixed; right: 50px; bottom: 50px;
+font-size: 20px; text-transform: uppercase; font-weight: bold; text-align: center; line-height: 70px; color: #fff; box-sizing: border-box;}
+.wrap a p.rightBtn.on {position: absolute; bottom: 420px;}
+.wrap a p.rightBtn span {position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); font-size: 16px; font-weight: bold;}
+
+
+/* 반응형 */
+/* 1400~1024px */
+@media screen and (max-width:1400px) {
+    /* header */
+    header {font-size: 19px;}
+    .innerheader {width: 95%; min-width: 1024px;}
+    .innerheader nav {width: 75%;}
+    .innerheader nav ul.menu li {width: 10%; margin-right: 8%;}
+    header .sub_menu {font-size: 16px;}
+    header .sub_menu nav {width: 72%;}
+    header .sub_menu ul.sub_list li {width: 13%; margin-right: 5%;}
+    /* visual */
+    .visual_inner ul .slick-prev:after {font-size: 75px;}
+    .visual_inner ul .slick-next:after {font-size: 75px;}
+    .visual_inner ul li .txt_box .title {font-size: 70px; line-height: 100px; margin: 2% 0 3%;}
+    .visual_inner ul li .txt_box .txt {font-size: 16px; line-height: 30px;}
+    .visual_inner ul li a.btn {width: 145px; height: 40px; font-size: 17px; line-height: 40px;
+    padding-left: 35px; margin-top: 3%;}
+    .visual_inner ul li a.btn::before {font-size: 25px; right: 30px;}
+    /* company advantage01 */
+    .company_advantage01 .inner {width: 95%; margin: 140px auto;}
+    .company_advantage01 .inner p.tit {font-size: 30px; margin-bottom: 35px;}
+    .company_advantage01 .inner p.txt {font-size: 45px;}
+    .company_advantage01 .inner p.txt span{font-size: 20px;}
+    /* company advantage02 */
+    .company_advantage02 {height: 580px; margin-bottom: 140px;}
+    .company_advantage02 .inner {width: 1022px;}
+    .company_advantage02 .inner ul li .txt_box {height: 580px; padding: 60px 0 75px; transform: none; box-sizing: border-box;}
+    .company_advantage02 .inner ul li .txt_box .num {font-size: 25px; margin-bottom: 70px;}
+    .company_advantage02 .inner ul li .txt_box .icon {font-size: 60px; margin-bottom: 70px;}
+    .company_advantage02 .inner ul li .txt_box .tit {font-size: 30px; margin-bottom: 20px;}
+    .company_advantage02 .inner ul li .txt_box .txt {font-size: 18px; line-height: 25px;}
+    /* product */
+    .product {margin-bottom: 140px;}
+    .product .inner {width: 95%;}
+    .product .inner ul li {width: 23.5%; margin-right: 2%;}
+    .product .inner ul li .img_box {height: 363px; margin-bottom: 28px;}
+    .product .inner ul li .img_box .num {font-size: 20px; margin: 15px 0 0 15px; z-index: 3;}
+    .product .inner ul li .img_box p.img {position: absolute; margin-left: 0; left: 50%; top: 55%; transform: translate(-50%, -50%);}
+    .product .inner ul li .img_box p.img img {z-index: -1;}
+    .product .inner ul li .img_box:after {font-size: 15px; z-index: 100;}
+    .product .inner ul li .img_box:before {z-index: 2;}
+    .product .inner ul li .txt_box p.tit {font-size: 20px; margin-bottom: 20px;}
+    .product .inner ul li .txt_box p.tit:after {top: 35px;}
+    .product .inner ul li .txt_box p.txt {font-size: 13px;}
+    /* company advantage03 */
+    .company_advantage03 {margin-bottom: 140px;}
+    .company_advantage03 .inner {width: 95%;}
+    .company_advantage03 .inner .txt_box {padding: 95px;}
+    .company_advantage03 .inner p.tit {font-size: 30px; margin-bottom: 35px;}
+    .company_advantage03 .inner p.txt {font-size: 45px;}
+    /* news */
+    .news {margin-bottom: 140px;}
+    .news .inner {width: 95%;}
+    .news .inner ul li .img {margin-bottom: 28px;}
+    .news .inner ul li .bottom p.newsTit {font-size: 18px; margin-bottom: 20px;}
+    .news .inner ul li .bottom a {font-size: 16px;}
+    /* company_advantage04 */
+    .company_advantage04 .inner p.title {font-size: 30px; margin-bottom: 20px;}
+    .company_advantage04 .inner p.txt {font-size: 18px; margin-bottom: 40px;}
+    .company_advantage04 .inner a {font-size: 14px; padding: 8px 35px;}
+    /* footer */
+    .inner_footer {width: 95%;}
+    footer ul.contact > li:nth-child(2) {width: 50%; margin: -5px 0 0 0;}
+}
+/* 1024~769px */
+@media screen and (max-width: 1023px) {
+    /* header */
+    header {font-size: 16px; height: 70px;}
+    .innerheader {width: 95%; min-width: 769px;}
+    .innerheader h1.logo {margin-top: 20px; width: 139px; height: auto;}
+    .innerheader nav {width: 70%; line-height: 70px;}
+    .innerheader nav ul.menu li {width: 13%; margin-right: 8%;}
+    header .sub_menu {height: 200px; font-size: 14px;}
+    header .sub_menu nav {width: 69%;}
+    header .sub_menu ul.sub_list li {padding-top: 35px; width: 15%; margin-right: 5.5%;}
+    header .sub_menu ul.sub_list li a {height: 25px;}
+    header .sub_menu ul.sub_list li a:hover span {width: 60px;}
+    /* visual */
+    .visual_inner ul.slick-dots {display: none;}
+    .visual_inner ul .slick-prev:after {font-size: 60px;}
+    .visual_inner ul .slick-next:after {font-size: 60px;}
+    .visual_inner ul li .txt_box .title {font-size: 40px; line-height: 55px;}
+    .visual_inner ul li .txt_box .txt {font-size: 13px; line-height: 20px;}
+    .visual_inner ul li a.btn {width: 130px; height: 35px; font-size: 14px; line-height: 35px;
+    padding-left: 30px; margin-top: 4%;}
+    .visual_inner ul li a.btn::before {font-size: 25px; right: 30px;}
+    /* company advantage01 */
+    .company_advantage01 .inner {width: 95%; margin: 75px auto;}
+    .company_advantage01 .inner p.tit {font-size: 20px; margin-bottom: 20px;}
+    .company_advantage01 .inner p.txt {font-size: 30px;}
+    .company_advantage01 .inner p.txt span{font-size: 15px;}
+    /* company advantage02 */
+    .company_advantage02 {height: 420px; margin-bottom: 75px;}
+    .company_advantage02 .inner {width: 750px;}
+    .company_advantage02 .inner ul li .txt_box {height: 420px; padding: 40px 0 65px; transform: none; box-sizing: border-box;}
+    .company_advantage02 .inner ul li .txt_box .num {font-size: 15px; margin-bottom: 50px;}
+    .company_advantage02 .inner ul li .txt_box .icon {font-size: 35px; margin-bottom: 50px;}
+    .company_advantage02 .inner ul li .txt_box .tit {font-size: 18px; margin-bottom: 20px;}
+    .company_advantage02 .inner ul li .txt_box .txt {font-size: 13px; line-height: 20px;}
+    /* product */
+    .product {margin-bottom: 75px;}
+    .product .inner {width: 95%;}
+    .product .inner ul li .img_box {height: 264px; margin-bottom: 15px;}
+    .product .inner ul li .img_box .num {font-size: 15px; margin: 10px 0 0 10px;}
+    .product .inner ul li .img_box p.img {position: absolute; margin-left: 0; left: 50%; top: 55%; transform: translate(-50%, -50%);}
+    .product .inner ul li .img_box p.img img {z-index: -1;}
+    .product .inner ul li .img_box:after {font-size: 10px; z-index: 100;}
+    .product .inner ul li .img_box:before {z-index: 2;}
+    .product .inner ul li .txt_box p.tit {font-size: 12px; margin-bottom: 15px;}
+    .product .inner ul li .txt_box p.tit:after {top: 23px;}
+    .product .inner ul li .txt_box p.txt {font-size: 7px;}
+    /* company advantage03 */
+    .company_advantage03 {margin-bottom: 75px;}
+    .company_advantage03 .inner {width: 95%;}
+    .company_advantage03 .inner .txt_box {padding: 55px;}
+    .company_advantage03 .inner p.tit {font-size: 20px; margin-bottom: 20px;}
+    .company_advantage03 .inner p.txt {font-size: 30px;}
+    /* news */
+    .news {margin-bottom: 75px;}
+    .news .inner {width: 95%;}
+    .news .inner ul li .img {margin-bottom: 15px;}
+    .news .inner ul li .bottom p.newsTit {font-size: 14px; margin-bottom: 12px;}
+    /* company_advantage04 */
+    .company_advantage04 .inner p.title {font-size: 25px; margin-bottom: 13px;}
+    .company_advantage04 .inner p.txt {font-size: 15px; margin-bottom: 25px;}
+    .company_advantage04 .inner a {font-size: 12px; padding: 5px 25px;}
+    /* 탑버튼 */
+    .wrap .goTop p.rightBtn {color: #3C4194; width: 50px; height: 50px;}
+    .wrap .goTop p.rightBtn:after {color: #fff; font-size: 25px; line-height: 50px; font-weight: normal;
+    content: '\f106'; font-family: 'fontAwesome'; position: absolute; left: 50%; transform: translateX(-50%);}
+    .wrap a p.rightBtn.on {position: absolute; bottom: 295px;}
+    /* footer */
+    footer {padding: 25px 0 30px 0;}
+    .inner_footer {width: 95%;}
+    .inner_footer .top {margin-bottom: 0px;}
+    .inner_footer .menu li {height: 100px;}
+    .inner_footer .menu li.logo {margin-top: 0; width: 139px; height: auto;}
+    .inner_footer .menu li.logo a {width: 100%; height: 100%;}
+    .inner_footer .menu li.logo a img {width: 100%; height: 100%;}
+    .inner_footer .menu li.txt p.tit {font-size: 15px; margin-bottom: 15px;}
+    .inner_footer .menu li.txt p {font-size: 12px; margin-bottom: 5px;}
+    footer .bottom ul.contact > li:nth-child(1) {width: 40%;}
+    footer ul.contact li ul.adress {width: 100%; font-size: 10px;}
+    footer ul.contact li ul.adress li {width: 100%; display: block;}
+    footer ul.contact li ul.adress li.float {float: none; width: 100%; margin-right: 0; text-align: left; margin-bottom: 10px;}
+    footer ul.contact li ul.adress li p {display: block;}
+    footer ul.contact > li:nth-child(2) {width: 55%; margin: 15px 15px 0 0; float: right;}
+    footer ul.contact li ul.sns {font-size: 35px; text-align: center;}
+    footer ul.contact li ul.sns li {width: 22%;}
+}
+/* 768px이하 */
+@media screen and (max-width:768px) {
+    /* header */
+    header {height: 45px;}
+    .innerheader {width: 95%; min-width: 320px; position: relative;}
+    .innerheader h1.logo {margin-top: 8px; width: 139px; height: auto;}
+    .innerheader nav {display: none; width: 0; height: 0; opacity: 0;}
+    header .sub_menu {display: none; width: 0; height: 0; opacity: 0;}
+    .innerheader a.menubar {display: block; position: absolute; right: 0; top: 46%; font-size: 25px; transform: translateY(-50%);}
+    /* header-gnb */
+    .gnb {height: 100vh; width: 100%; padding: 0 2.5% 2.5% 2.5%; background: #171312; z-index: 200;
+    position: absolute; right: -100%; top: 0; box-sizing: border-box; transition: all 0.8s;}
+    .gnb.on {right: 0; transition: all 0.8s;}
+    .gnb.on .close {font-size: 27px; color: #fff; float: right; display: block;}
+    .gnb.on .gnb_menu {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+    .gnb .gnb_menu li {margin-bottom: 25px;}
+    .gnb .gnb_menu a {display: block; text-align: center;}
+    .gnb .gnb_menu a.gnb_tit {font-size: 20px; margin-bottom: 10px;}
+    .gnb .gnb_menu a.gnb_sub {font-size: 16px; margin-bottom: 5px;}
+    /* visual */
+    .visual_inner ul .slick-prev {left: 7%;}
+    .visual_inner ul .slick-prev:after {font-size: 50px;}
+    .visual_inner ul .slick-next {right: 7%;}
+    .visual_inner ul .slick-next:after {font-size: 50px;}
+    .visual_inner ul li .txt_box .title {font-size: 45px; line-height: 60px;}
+    .visual_inner ul li .txt_box .txt {display: none;}
+    .visual_inner ul li a.btn {width: 110px; height: 30px; font-size: 12px; line-height: 30px;
+    padding-left: 25px; margin-top: 5%;}
+    .visual_inner ul li a.btn::before {font-size: 18px; right: 25px;}
+    /* company advantage01 */
+    .company_advantage01 .inner {width: 95%; margin: 35px auto;}
+    .company_advantage01 .inner p.tit {font-size: 18px; margin-bottom: 15px;}
+    .company_advantage01 .inner p.txt {font-size: 20px;}
+    .company_advantage01 .inner p.txt span{font-size: 12px;}
+    /* company advantage02 */
+    .company_advantage02  {margin-bottom: 35px; height: 791px;}
+    .company_advantage02 .inner {width: 100%;}
+    .company_advantage02 .inner ul.list {width: 100%; height: 791px; padding-top: 15px; box-sizing: border-box;}
+    .company_advantage02 .inner ul li {float: none; border-left: none; width: 100%; height: 253px;}
+    .company_advantage02 .inner ul li p.img {height: 253px; overflow: hidden;}
+    .company_advantage02 .inner ul li p.img img {width: 100%; height: 480px; transform: translateY(-25%); opacity: 1;}
+    .company_advantage02 .inner ul li .txt_box {height: 253px; padding: 20px 0; margin-bottom: 1px;}
+    .company_advantage02 .inner ul li .txt_box .num {display: none;}
+    .company_advantage02 .inner ul li .txt_box .icon {font-size: 60px; margin-bottom: 15px;}
+    .company_advantage02 .inner ul li .txt_box .tit {font-size: 30px; margin-bottom: 20px;}
+    .company_advantage02 .inner ul li .txt_box .txt {font-size: 18px; margin-bottom: 25px;}
+    .company_advantage02 .inner ul li .txt_box .txt span {display: inline-block;}
+    /* product */
+    .product {margin-bottom: 35px;}
+    .product .inner .mobile_tit {display: block;}
+    .product .inner ul li {width: 49%; margin-right: 2%; margin-bottom: 25px;}
+    .product .inner ul li:nth-child(2), .product .inner ul li:nth-child(4) {margin-right: 0;}
+    .product .inner ul li:nth-child(3), .product .inner ul li:nth-child(4) {margin-bottom: 0;}
+    .product .inner ul li .img_box {width: auto; height: 300px; margin-bottom: 10px;}
+    .product .inner ul li .img_box p.img {top: 50%;}
+    .product .inner ul li .txt_box {text-align: center;}
+    .product .inner ul li .txt_box p.tit:after {left: 50%; transform: translateX(-50%);}
+    /* company advantage03 */
+    .company_advantage03 {margin-bottom: 35px;}
+    .company_advantage03 .inner {width: 95%;}
+    .company_advantage03 .inner .txt_box {padding: 35px; position: relative;}
+    .company_advantage03 .inner p.tit {font-size: 18px; margin-bottom: 15px;}
+    .company_advantage03 .inner p.txt {font-size: 20px;;}
+    /* news */
+    .news {margin-bottom: 30px;}
+    .news .inner ul {width: 95%; margin: 0 auto;}
+    .news .inner ul li {float: none; width: 100%; margin-right: 0;}
+    .news .inner ul li .img {width: 50%; display: inline-block; margin-right: 3%; box-sizing: border-box;}
+    .news .inner ul li .bottom {width: 45%; display: inline-block; transform: translateY(5px);}
+    .news .inner ul li .bottom p.newsTit {font-size: 15px; margin-bottom: 25px;}
+    /* company_advantage04 */
+    .company_advantage04 .inner p.title {font-size: 20px; margin-bottom: 10px;}
+    .company_advantage04 .inner p.txt {font-size: 10px; margin-bottom: 20px;}
+    .company_advantage04 .inner a {font-size: 7px; padding: 3px 20px;}
+    /* 탑버튼 */
+    .wrap .goTop p.rightBtn {color: #3C4194; width: 35px; height: 35px; font-size: 1px; line-height: 35px;
+    position: absolute; right: 5%}
+    .wrap a p.rightBtn.on {position: absolute; bottom: 332.5px;}
+    .wrap .goTop p.rightBtn:after {color: #fff; font-size: 20px; line-height: 35px; font-weight: normal;
+    content: '\f106'; font-family: 'fontAwesome'; position: absolute; left: 50%; transform: translateX(-50%);}
+    /* footer */
+    footer {padding: 25px 0 30px 0; height: 350px;}
+    .inner_footer {width: 95%; position: relative;}
+    .inner_footer .top {z-index: 100; position: relative;}
+    .inner_footer .menu li {float: none;}
+    .inner_footer .menu li.logo {margin: 0 auto 94px;}
+    .inner_footer .menu li.txt {width: 33.3333%; box-sizing: border-box;}
+    footer .bottom {position: absolute; top: 50px;}
+    footer .bottom ul.contact > li:nth-child(1) {float: none; margin-bottom: 141px; width: 100%; text-align: center;}
+    footer ul.contact li ul.adress {width: 65%; margin: 0 auto; font-size: 11px; }
+    footer ul.contact li ul.adress li.float {float: left; margin-right: 3%; text-align: center; width: 29%; box-sizing: border-box;}
+    footer ul.contact li ul.adress li:nth-child(2) {width: 32%;}
+    footer ul.contact li ul.adress li:nth-child(4) {margin-right: 0;}
+    footer ul.contact > li:nth-child(2) {width: 100%; margin: 0 auto;}
+    footer ul.contact li ul.sns {margin: 0 auto;}
+    footer ul.contact li ul.sns li {width: 25%;}
+}
+/* 500~320px (일부만 해당) */
+@media screen and (max-width: 500px) {
+    /* header */
+    header {height: 45px;}
+    .innerheader {width: 95%; min-width: 320px;}
+    /* visual */
+    .visual_inner ul .slick-prev {left: 7%;}
+    .visual_inner ul .slick-prev:after {font-size: 40px;}
+    .visual_inner ul .slick-next {right: 7%;}
+    .visual_inner ul .slick-next:after {font-size: 40px;}
+    .visual_inner ul li .txt_box .title {font-size: 30px; line-height: 40px;}
+    .visual_inner ul li .txt_box .txt {display: none;}
+    .visual_inner ul li a.btn {width: 80px; height: 20px; font-size: 10px; line-height: 20px;
+    padding-left: 15px; margin-top: 5%;}
+    .visual_inner ul li a.btn::before {font-size: 17px; right: 12px;}
+    /* company advantage02 */
+    .company_advantage02  {height: 527px;}
+    .company_advantage02 .inner ul.list {height: 527px;}
+    .company_advantage02 .inner ul li {height: 165px;}
+    .company_advantage02 .inner ul li p.img {height: 165px;}
+    .company_advantage02 .inner ul li .txt_box {height: 165px; padding: 10px 0;}
+    .company_advantage02 .inner ul li .txt_box .icon {font-size: 45px; margin-bottom: 15px;}
+    .company_advantage02 .inner ul li .txt_box .tit {font-size: 18px; margin-bottom: 20px;}
+    .company_advantage02 .inner ul li .txt_box .txt {font-size: 13px; margin-bottom: 20px;}
+    /* product */
+    .product .inner ul li .img_box {height: 200px;}
+    /* company advantage03 */
+    .company_advantage03 .inner p.txt span {display: block;}
+    /* news */
+    .news .inner ul li .img {margin-right: 3%;}
+    .news .inner ul li .bottom {width: 45%; transform: translateY(30px);}
+    .news .inner ul li .bottom p.newsTit span {display: block;}
+    .news .inner ul li .bottom a {font-size: 14px;}
+    /* company_advantage04 */
+    .company_advantage04 p.img img {width: auto; height: 192px; transform: translateX(-25%);}
+    /* footer */
+    footer ul.contact li ul.adress {width: 80%; margin: 0 auto;}
+    footer ul.contact li ul.adress li.float {float: left; margin-right: 3%; width: 29%;}
+    footer ul.contact li ul.adress li:nth-child(2) {width: 32%;}
+    footer ul.contact li ul.sns {width: 95%;}
+}
+/* 410px이하(footer만) */
+@media screen and (max-width: 410px) {
+    footer .bottom ul.contact > li:nth-child(1) {margin-bottom: 110px;}
+}
+/* ~320px */
+@media screen and (max-width: 320px) {
+    /* header */
+    .innerheader {width: 95%; min-width: 200px;}
+    /* visual */
+    .visual_inner ul li .txt_box .title {font-size: 25px; line-height: 30px;}
+    /* company advantage02 */
+    .company_advantage02 .inner ul li:nth-child(2) .txt_box .icon {margin-bottom: 8px;}
+    .company_advantage02 .inner ul li:nth-child(2) .txt_box .tit,
+    .company_advantage02 .inner ul li:nth-child(2) .txt_box .txt {margin-bottom: 12px;}
+    /* product */
+    .product .inner ul li .txt_box p.tit {font-size: 11px;}
+    .product .inner ul li .txt_box p.txt {font-size: 4px;}
+    /* news */
+    .news .inner ul li .bottom p.newsTit {font-size: 11px; margin-bottom: 20px;}
+    .news .inner ul li .bottom a {font-size: 12px;}
+}
